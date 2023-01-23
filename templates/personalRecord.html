@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="mt-4 p-5 bg-danger text-white rounded">
+        <center><h1>ประวัติส่วนตัว</h1></center>
+        <p>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="{% static 'images/fifa.jpg' %}"
+                     width="100%" height="100%">
+            </div>
+            <div class="col-lg-8">
+                <h4>ชื่อ : นางสาวนวรัตน์ พิบูลย์</h4>
+                <h4>ชื่อเล่น : ฟีฟ่า</h4>
+                <h4>เกิดวันที่ : 8 มกราคม 2544</h4>
+                <h4>กรุ๊ปเลือด : O</h4>
+                <h4>สัญชาติ : ไทย  เชื้อชาติ : ไทย  ศาสนา : พุทธ</h4>
+                <h4>ที่อยู่ : 122 ม.4 ตำบลวังสะพุง อำเภอวังสะพุง จังหวัดเลย 42130</h4>
+                <h4>เบอร์โทร : 0943879402</h4>
+                <h4>Email : nawarat.pi@rmuti.ac.th</h4>
+            </div>
+        </div>
+    </div> <br>
+{% endblock %}
