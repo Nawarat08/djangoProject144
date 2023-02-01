@@ -2,10 +2,11 @@
 <br>
 <ul class="list-group ">
     <li class="list-group-item list-group-item-dark">Menu</li>
-    <li class="list-group-item"><a href="/home">หน้าหลัก</a></li>
-    <li class="list-group-item"><a href="/personalRecord">ประวัติส่วนตัว</a></li>
-    <li class="list-group-item"><a href="/educationalRecord">ประวัติการศึกษา</a></li>
-    <li class="list-group-item"><a href="/interests">สิ่งที่สนใจ</a></li>
-    <li class="list-group-item"><a href="/dreamJob">สินค้า</a></li>
-    <li class="list-group-item"><a href="/roleModel">บุคคลต้นแบบ</a></li>
+    <li class="list-group-item"><a href="{% url 'home' %}">หน้าหลัก</a></li>
+    <li class="list-group-item"><a href="{% url 'personalRecord' %}">ประวัติส่วนตัว</a></li>
+    <li class="list-group-item"><a href="{% url 'educationalRecord' %}">ประวัติการศึกษา</a></li>
+    <li class="list-group-item"><a href="{% url 'interests' %}">สิ่งที่สนใจ</a></li>
+    <li class="list-group-item"><a href="{% url 'dreamJob' %}">สินค้า</a></li>
+    <li class="list-group-item"><a href="{% url 'roleModel' %}">บุคคลต้นแบบ</a></li>
+    <li class="list-group-item"><a href="{% url 'product' %}">รายการสินค้า</a></li>
 </ul>
