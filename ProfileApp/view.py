@@ -35,27 +35,27 @@ def showMrData(request):
 
 
 def product(request):
-    name = "นวญลหง"
-    surname = "เชื้อสาวะถี"
-    nickname = "ชมพู่"
-    age = "21 ปี"
-    weight = "53"
-    height = "153"
-    color = "สีน้ำเงิน-ขาว"
-    song = "ข้างกาย"
-    phoneNumber = "0967691570"
-    studenCode = "65342310132-6"
+    name = "นวรัตน์"
+    surname = "พิบูลย์"
+    nickname = "ฟีฟ่า"
+    age = "22 ปี"
+    weight = "55"
+    height = "165"
+    color = "สีฟ้า"
+    song = "พบกันใหม่"
+    phoneNumber = "0943879402"
+    studenCode = "65342310144-4"
     listNameProduct = [
-        ['มาร์คมะขามน้ำผึ้ง', 190, '../../static/images/muse1.png'],
-        ["มาร์คมะกู้ด", 199, '../../static/images/muse2.png'],
-        ["ยาสีฟันนมแพะ", 199, '../../static/images/pro3.png'],
-        ["น้ำหอม JANUA กลิ่น flower shop", 290, '../../static/images/pro4.PNG'],
-        ["น้ำหอม JANUA กลิ่น wood sand and fresh vibe", 290, '../../static/images/pro5.PNG'],
-        ["น้ำหอม JANUA กลิ่น srxy on the beach", 290, '../../static/images/pro6.PNG'],
-        ["น้ำหอม JANUA กลิ่น sweetie picnic", 290, '../../static/images/pro7.PNG'],
-        ["กลอสดอกไม้ 01-poppy pink", 199, '../../static/images/pro8.png'],
-        ["กลอสดอกไม้ 02-sunny flower", 199, '../../static/images/pro9.png'],
-        ["กลอสดอกไม้ 03-ruby tulip", 199, '../../static/images/pro10.png']
+        ['รองเท้า Adidas', 2400, '../../static/images/Adidas.jpg'],
+        ["รองเท้า Converse", 1890, '../../static/images/Converse.jpg'],
+        ["รองเท้า Nike", 5500, '../../static/images/nikee.jpg'],
+        ["รองเท้า Vans", 2400, '../../static/images/Vans.jpg'],
+        ["รองเท้า Keds", 1390, '../../static/images/k.webp'],
+        ["รองเท้า Keen", 4900, '../../static/images/keen.jpeg'],
+        ["รองเท้า Crocs", 3190, '../../static/images/Crocs.jpg'],
+        ["กระเป๋า Freitag", 5890, '../../static/images/Freitag.jpg'],
+        ["กระเป๋า Gentlewoman", 390, '../../static/images/Gentlewoman.jpg'],
+        ["กระเป๋า Coach", 8690, '../../static/images/Coach.jpg']
     ]
     return render(request, 'product.html',
                   {'name': name, 'surname': surname, 'nickname': nickname, 'age': age, 'wight': weight,
