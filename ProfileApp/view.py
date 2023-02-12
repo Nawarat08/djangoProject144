@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect,get_object_or_404
 
 def test(request):
     return HttpResponse("<H1> Hello Word <br> This is my Word wide web </H1>")
@@ -62,4 +62,48 @@ def product(request):
                    'height': height,
                    'color': color, 'song': song, 'phoneNumber': phoneNumber, 'studenCode': studenCode,
                    'ListNameProduct': listNameProduct})
+
+listOutProduct = []
+from ProfileApp.forms import *
+from ProfileApp.models import *
+
+
+
+def lisProduct(request):
+    context = {'product': listOutProduct}
+    return render(request, 'listProduct.html', context)
+
+
+def inputproduct(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form = form.cleaned_data
+            id = form.get('id')
+            name = form.get('name')
+            brand = form.get('brand')
+            price = form.get('price')
+            amount = form.get('amount')
+            detail = form.get('detail')
+
+            if amount < 3:
+                discountlate = 0
+            elif amount < 5:
+                discountlate = 0.05
+            else:
+                discountlate = 0.10
+
+            total = price * amount
+            discount = total * discountlate
+            net = total - discount
+
+            product = Product(id, name, brand, price, amount, detail, total, discount, net)
+            listOutProduct.append(product)
+            return redirect('listProduct')
+        else:
+            form = ProductForm(form)
+    else:
+        form = ProductForm()
+    context = {"form": form}
+    return render(request, 'inputProduct.html', context)
 

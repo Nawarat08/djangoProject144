@@ -10,7 +10,9 @@ urlpatterns = [
     path('interests', view.interests, name='interests'),
     path('dreamJob', view.dreamJob, name='dreamJob'),
     path('roleModel', view.roleModel, name='roleModel'),
-    path('product', view.product, name='product')
+    path('product', view.product, name='product'),
+    path('inputProduct', view.inputproduct, name='inputProduct'),
+    path('listProduct', view.lisProduct, name='listProduct'),
 
 ]
 
